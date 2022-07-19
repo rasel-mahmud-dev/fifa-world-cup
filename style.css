@@ -5,8 +5,6 @@ body{
 
 h1{
     margin: 0;
-    font-weight: 700;
-    font-size: 60px;
 }
 
 
@@ -30,6 +28,8 @@ h1{
 .btn{
     background-color: var(--primary-color);
     display: flex;
+    outline: none;
+    border: none;
     align-items: center;
     padding: 16px 25px;
     color: var(--white-color);
@@ -49,6 +49,7 @@ h1{
     margin-left: 10px;
 }
 .btn_outline{
+    outline: none;
     border: 1px solid rgba(153, 153, 153, 0.637);
     background-color: transparent;
     padding: 5px 12px;
@@ -86,17 +87,19 @@ h1{
 }
 
 .banner_image{
-    /* position: absolute; */
+    
 }
 .banner_image img{
     display: block;
     height: 100%;
-    /* width: 100%; */
+    margin: auto;
 }
 .banner__content .btn{
     margin-bottom: 50px;
 }
 .banner__content h1{
+    font-weight: 700;
+    font-size: 60px;
     color: var(--white-color);
 }
 
@@ -129,6 +132,7 @@ h1{
     text-align: center;
     padding: 10px;
     margin: 10px 0;
+    min-width: 100px;
     border-radius: 10px;
 }
 .content_navigation .nav_item a{
@@ -229,3 +233,76 @@ footer .bottom_row{
 }
 
 /*----------footer end -------- */
+
+
+
+
+
+
+
+
+
+
+
+/* ----------- media queries---------- */
+
+@media only screen and (max-width: 576px) {
+
+    .top_banner__card h1{
+        font-size: 40px;
+        font-weight: 700;
+        color: var(--white-color);
+    }
+
+    .top_banner__card{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .banner_image img{
+        height: auto;
+        width: 100%;
+    }
+
+    .content_wrapper{
+        flex-direction: column;
+
+    }
+    .content_navigation{
+        width: 100%;
+        display: flex;
+        padding: 0;
+        margin: 0;
+        display: none;
+        justify-content: center;
+        background-color: transparent;
+    }
+    .content_navigation .nav_item{
+        padding: 0px;
+        margin: 0;
+        min-width: 10px;
+    }
+    .content_navigation .nav_item a{
+        color: var(--dark-color)
+    }
+    .content_navigation .active_item a{
+        color: var(--white-color)
+    }
+
+    .content_items{
+        display: block;
+        margin-left: 0;
+    }
+
+    footer .bottom_row{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .bottom_row li{
+        text-align: center;
+        margin: 15px;
+        font-size: 14px;
+    }
+    .footer_title{
+        font-size: 22px;
+    }
+
+}
