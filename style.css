@@ -141,7 +141,6 @@ h1{
     text-align: center;
     padding: 10px;
     margin: 10px 0;
-    min-width: 100px;
     border-radius: 10px;
 }
 .content_navigation .nav_item a{
@@ -161,10 +160,10 @@ h1{
     margin-left: 20px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 25px
+    grid-gap: 25px;
 }
 
-.content_item{
+.content_item, .match{
     border-radius: 13px;
     border: 1px solid rgba(214, 214, 214, 0.537);
 }
@@ -214,6 +213,46 @@ h1{
 }
 
 /*----------main content end -------- */
+
+
+/*------------ matches container */
+.matches{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: 20px;
+    grid-gap: 25px;
+}
+.match{
+    padding: 50px;
+}
+.match h4{
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: 600;
+    color: var(--dark-color);
+}
+.match .date{
+    font-size: 16px;
+    color: var(--para-dark-color);
+    text-align: center;
+}
+.flag_row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flag_row h4{
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 20px;
+}
+
+.flag_row img{
+    width: 100%;
+}
+
 
 
 
@@ -305,6 +344,11 @@ footer .bottom_row{
         height: auto;
         width: 100%;
     }
+
+
+    .match{
+        padding: 30px;
+    }
 }
 
 
@@ -362,10 +406,11 @@ footer .bottom_row{
         color: var(--white-color)
     }
 
-    .content_items{
+    .content_items, .matches{
         grid-template-columns: repeat(2, 1fr);
         margin-left: 0;
         grid-gap: 20px;
+        width: 100%
     }
     #show_all_item_btn{
         display: block;
@@ -413,7 +458,7 @@ footer .bottom_row{
         font-size: 14px;
     }
     .top_banner__card .btn{
-        margin: 15px auto 40px;
+        margin: 25px auto 40px;
     }
     .banner_image{
         margin-right: 0;
@@ -451,10 +496,13 @@ footer .bottom_row{
         color: var(--white-color)
     }
 
-    .content_items{
+    .content_items, .matches{
         grid-template-columns: repeat(1, 1fr);
         margin-left: 0;
         grid-gap: 15px;
+        
+        /* get full width of flex item */
+        width: 100%;
     }
 
 
