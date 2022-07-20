@@ -28,7 +28,7 @@ h1{
 .container{
     max-width: 1400px;
     margin: auto;
-    padding: 0 10px;
+    padding: 0 20px;
 }
 .btn{
     background-color: var(--primary-color);
@@ -156,7 +156,7 @@ h1{
     color: var(--link-color);
 }
 
-.content_items, .matches, .group_section{
+.blogs, .matches, .group_section{
     margin-left: 20px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -165,13 +165,15 @@ h1{
 
 }
 
-.content_item, .match, .group{
+.blog_item, .match, .group{
     border-radius: 13px;
     border: 1px solid rgba(214, 214, 214, 0.537);
 }
-.content_item img{
+.blog_item img{
     width: 100%;
     display: block;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }   
 
 
@@ -276,6 +278,7 @@ h1{
     font-weight: 700;
     text-align: center;
     margin-bottom: 5px;
+    border-radius: 6px;
 }
 .group_teams{
     display: flex;
@@ -287,10 +290,14 @@ h1{
     margin: 4px 0;
     box-sizing: border-box;
     align-items: center;
+    border-radius: 4px;
 }
 .team_img{
     width: 60px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
     overflow: hidden;
+    
 }
 .team_img img{
     margin-right: 10px;
@@ -375,9 +382,10 @@ footer .bottom_row{
 
 
 
-/*-------- small laptop view---------- */
+/*-------- laptop view---------- */
 
 @media only screen and (max-width: 1280px) {
+    /*--- top banner--- */
     .top_banner__card{
         padding: 77px 0px 0 80px;
     }
@@ -392,13 +400,20 @@ footer .bottom_row{
         width: 100%;
     }
 
-
     .match{
         padding: 30px;
     }
 }
 
 
+/*----- large tablet view ------  */
+@media only screen and (max-width: 992px) {
+    .group_section, .matches{
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+        width: 100%
+    }
+}
 
 /*-------- tablet view---------- */
 @media only screen and (max-width: 834px) and (min-width: 577px) {
@@ -453,7 +468,7 @@ footer .bottom_row{
         color: var(--white-color)
     }
 
-    .content_items, .matches, .group_section{
+    .blogs, .matches, .group_section{
         grid-template-columns: repeat(2, 1fr);
         margin-left: 0;
         grid-gap: 20px;
@@ -486,14 +501,16 @@ footer .bottom_row{
         font-size: 14px;
     }
 
+
+    /*--- top banner--- */
     .top_banner {
         margin-top: 15px;
     }
-    /*--- top banner--- */
     .top_banner__card{
         text-align: center;
         grid-template-columns: repeat(1, 1fr);
         padding: 50px 50px 0;
+        border-radius: 10px;
     }
    
     .top_banner__card h1{
@@ -543,7 +560,7 @@ footer .bottom_row{
         color: var(--white-color)
     }
 
-    .content_items, .matches, .group_section{
+    .blogs, .matches, .group_section{
         grid-template-columns: repeat(1, 1fr);
         margin-left: 0;
         grid-gap: 15px;
@@ -572,5 +589,12 @@ footer .bottom_row{
     }
     .footer_title{
         font-size: 22px;
+    }
+    .social_links a{
+        width: 40px;
+        height: 40px;
+    }
+    .social_links a i{
+        font-size: 20px;
     }
 }
