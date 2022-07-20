@@ -223,7 +223,7 @@ h1{
     
 }
 .match{
-    padding: 50px;
+    padding: 30px;
 }
 .match h4{
     font-size: 20px;
@@ -248,7 +248,10 @@ h1{
     font-weight: 700;
     margin: 0 20px;
 }
-
+.flag_row div{
+    max-width: 80px;
+    min-width: 60px;
+}
 .flag_row img{
     width: 100%;
 }
